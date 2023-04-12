@@ -1,0 +1,60 @@
+IF ELSE CODE CHALLENGE:
+CODE:
+import java.util.Random;
+class IfElse{
+    public static void main (String [] args){
+    Random random = new Random();
+    int daysUntilExpiration = random.nextInt(12);
+    int discountPercentage = 0;
+
+    if (daysUntilExpiration==0){
+        System.out.println("Days to endmonth:" + daysUntilExpiration);
+        System.out.println("Your subscription has expired.");
+    }    
+    else if(daysUntilExpiration==1){
+        System.out.println("Days to endmonth:" + daysUntilExpiration);
+        System.out.println("Your subscription expires within a day! Renew now and save 20%!");
+    }
+
+    else if(daysUntilExpiration <=5){
+        System.out.println("Days to endmonth:" + daysUntilExpiration);
+        System.out.println("Your subscription expires in " + daysUntilExpiration + " days.Renew now and save 10%!");
+    }
+    
+    else if (daysUntilExpiration <= 10){
+        System.out.println("Days to endmonth:" + daysUntilExpiration);
+        System.out.println("Your subscription will expire soon. Renew now!");
+    }
+
+    if(daysUntilExpiration==1){
+        System.out.println("You Have A 20% Discount!");
+    }
+
+    else if(daysUntilExpiration <= 5){
+        System.out.println("You Have A 10% Discount!");
+    }
+}
+}
+
+
+OUTPUT:
+PS C:\Users\user\Documents\JAVA> java IfElse.java
+Days to endmonth:3
+Your subscription expires in 3 days.Renew now and save 10%!
+You Have A 10% Discount!
+PS C:\Users\user\Documents\JAVA> java IfElse.java
+Days to endmonth:0
+Your subscription has expired.
+You Have A 10% Discount!
+PS C:\Users\user\Documents\JAVA> java IfElse.java
+Days to endmonth:8
+Your subscription will expire soon. Renew now!
+PS C:\Users\user\Documents\JAVA> java IfElse.java
+Days to endmonth:9
+Your subscription will expire soon. Renew now!
+PS C:\Users\user\Documents\JAVA> java IfElse.java
+PS C:\Users\user\Documents\JAVA> java IfElse.java
+Days to endmonth:3
+Your subscription expires in 3 days.Renew now and save 10%!
+You Have A 10% Discount!
+PS C:\Users\user\Documents\JAVA>
